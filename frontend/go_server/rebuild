@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if ! docker container inspect mysql 2>/dev/null >/dev/null; then
+	docker run --network doghow --name mysql -e MYSQL_DATABASE=doghow -e MYSQL_ROOT_PASSWORD=doghow -d -v "$(pwd)/../mysql_data:/var/lib/mysql" mysql
+fi
+
+git pull origin master
+
+cd client
+git pull origin master
+cd -
+
+docker build -t doghow_server .
+
+docker rm -f doghow_server
+
+docker run -d --network doghow --name doghow_server -p "80:4000" -v "$(pwd)/db.sqlite:/app/db.sqlite" doghow_server

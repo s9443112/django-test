@@ -1,0 +1,14 @@
+version: '3.6'   # Docker Engine release 18.02.0+
+
+services:
+
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=iii05076416   # Change this password!
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data/:/var/lib/postgresql/data

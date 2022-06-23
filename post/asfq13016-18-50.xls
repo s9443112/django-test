@@ -1,0 +1,386 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+<meta http-equiv=Content-Type content="text/html; charset=UTF-8">
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head><style><!--
+td  {font-family:新細明體, serif;}
+.xl24  {mso-number-format:"@";}.xl30 {mso-style-parent:style0; mso-number-format:"0_ ";} .xl31 {mso-style-parent:style0; mso-number-format:"0.0_ ";} .xl32 {mso-style-parent:style0; mso-number-format:"0.00_ ";} .xl33 {mso-style-parent:style0; mso-number-format:"0.000_ ";} .xl34 {mso-style-parent:style0; mso-number-format:"0.0000_ ";} .xl35 {mso-style-parent:style0; mso-number-format:"0.00000_ ";} .xl36 {mso-style-parent:style0; mso-number-format:"0.000000_ ";} .xl37 {mso-style-parent:style0; mso-number-format:"0.0000000_ ";} .xl38 {mso-style-parent:style0; mso-number-format:"0.00000000_ ";} .xl39 {mso-style-parent:style0; mso-number-format:"0.000000000_ ";} .xl40 {mso-style-parent:style0; mso-number-format:"0.0000000000_ ";}
+--></style>
+<!--[if gte mso 9]><xml>
+<x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet>
+<x:Name>Sheet1</x:Name><x:WorksheetOptions>
+<x:DefaultRowHeight>330</x:DefaultRowHeight>
+<x:Selected/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorkbook>
+</xml><![endif]--></head>
+<body><table border=1 cellpadding=0 cellspacing=0 width=432 style='border-collapse: collapse;table-layout:fixed;width:324pt'>
+<tr>
+<td>部門</td>
+<td>工單編號</td>
+<td>實際開工日</td>
+<td>預計開工日</td>
+<td>預計完工日</td>
+<td>料件編號</td>
+<td>品名</td>
+<td>規格</td>
+<td>生產數量</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300005</td>
+<td class=xl24> </td>
+<td class=xl24>22/06/17</td>
+<td class=xl24>22/06/29</td>
+<td class=xl24>M02033BH-PAV</td>
+<td class=xl24>2033BH斜口鉗(生管)</td>
+<td class=xl24>金油 / 側磨+圓弧(斜)</td>
+<td class=xl33>1620.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300009</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/12</td>
+<td class=xl24>22/05/16</td>
+<td class=xl24>M02023NVB-PAH</td>
+<td class=xl24>2023NVB尖嘴鉗(生管)</td>
+<td class=xl24>金油 / 320面+尖尾</td>
+<td class=xl33>540.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300013</td>
+<td class=xl24> </td>
+<td class=xl24>22/06/11</td>
+<td class=xl24>22/06/15</td>
+<td class=xl24>M0G085-PAH</td>
+<td class=xl24>G085 水管鉗(生管)</td>
+<td class=xl24>金油/ 320全支</td>
+<td class=xl33>1000.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300016</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/14</td>
+<td class=xl24>22/05/18</td>
+<td class=xl24>M05GHR/L-PAR</td>
+<td class=xl24>5GHR/L 鋼絲鉗-雷射刃口(生管)</td>
+<td class=xl24>金油 / 側磨+四角+頂(鋼)</td>
+<td class=xl33>810.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300020</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/07</td>
+<td class=xl24>22/05/11</td>
+<td class=xl24>M02021NV-PAS</td>
+<td class=xl24>2021NV尖嘴鉗(生管)</td>
+<td class=xl24>金油 / 側磨+尖尾(尖)</td>
+<td class=xl33>504.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300024</td>
+<td class=xl24> </td>
+<td class=xl24>22/04/20</td>
+<td class=xl24>22/04/23</td>
+<td class=xl24>M08030V-PAV</td>
+<td class=xl24>8030V 斜口鉗(生管)</td>
+<td class=xl24>金油 / 側磨+圓弧(斜)</td>
+<td class=xl33>500.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300028</td>
+<td class=xl24> </td>
+<td class=xl24>22/06/16</td>
+<td class=xl24>22/06/20</td>
+<td class=xl24>M02031NV-PAV</td>
+<td class=xl24>2031NV 斜口鉗(生管)</td>
+<td class=xl24>金油 / 側磨+圓弧(斜)</td>
+<td class=xl33>504.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300032</td>
+<td class=xl24> </td>
+<td class=xl24>22/06/16</td>
+<td class=xl24>22/06/20</td>
+<td class=xl24>M02101V-PAR</td>
+<td class=xl24>2101V鋼絲鉗(生管)</td>
+<td class=xl24>金油 / 側磨+四角+頂(鋼)</td>
+<td class=xl33>504.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300036</td>
+<td class=xl24> </td>
+<td class=xl24>22/06/16</td>
+<td class=xl24>22/06/20</td>
+<td class=xl24>M08030V-PAV</td>
+<td class=xl24>8030V 斜口鉗(生管)</td>
+<td class=xl24>金油 / 側磨+圓弧(斜)</td>
+<td class=xl33>500.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300040</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/18</td>
+<td class=xl24>22/05/23</td>
+<td class=xl24>M0AA01-PKJ</td>
+<td class=xl24>AA-01水管鉗(生管)</td>
+<td class=xl24>磷酸+金油 / 320雙面</td>
+<td class=xl33>150.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300042</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/19</td>
+<td class=xl24>22/05/23</td>
+<td class=xl24>M02021NV-PAS</td>
+<td class=xl24>2021NV尖嘴鉗(生管)</td>
+<td class=xl24>金油 / 側磨+尖尾(尖)</td>
+<td class=xl33>150.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300045</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/19</td>
+<td class=xl24>22/05/23</td>
+<td class=xl24>M02201NV-PAR</td>
+<td class=xl24>2201NV鋼絲鉗(生管)</td>
+<td class=xl24>金油 / 側磨+四角+頂(鋼)</td>
+<td class=xl33>150.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300048</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/19</td>
+<td class=xl24>22/05/23</td>
+<td class=xl24>M02032BH-PAV</td>
+<td class=xl24>2032BH斜口鉗(生管)</td>
+<td class=xl24>金油 / 側磨+圓弧(斜)</td>
+<td class=xl33>150.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300052</td>
+<td class=xl24> </td>
+<td class=xl24>22/04/18</td>
+<td class=xl24>22/04/21</td>
+<td class=xl24>M06301BH-PAR</td>
+<td class=xl24>6301BH鋼絲鉗(生管)</td>
+<td class=xl24>金油 / 側磨+四角+頂(鋼)</td>
+<td class=xl33>540.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300056</td>
+<td class=xl24> </td>
+<td class=xl24>22/07/09</td>
+<td class=xl24>22/07/13</td>
+<td class=xl24>M02032-PAV</td>
+<td class=xl24>2032斜口鉗(生管)</td>
+<td class=xl24>金油 / 側磨+圓弧(斜)</td>
+<td class=xl33>540.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300068</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/28</td>
+<td class=xl24>22/06/01</td>
+<td class=xl24>M09033H/L-PAV</td>
+<td class=xl24>9033H/L 美式強力斜口鉗-雷射刃口(生管)</td>
+<td class=xl24>金油 / 側磨+圓弧(斜)</td>
+<td class=xl33>360.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300072</td>
+<td class=xl24> </td>
+<td class=xl24>22/07/21</td>
+<td class=xl24>22/07/26</td>
+<td class=xl24>M0H032-PV9</td>
+<td class=xl24>H032 斜口鉗(生管)</td>
+<td class=xl24>噴砂+磷酸鋅+金油/320全+內側刷鋼絲</td>
+<td class=xl33>1320.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300076</td>
+<td class=xl24> </td>
+<td class=xl24>22/07/21</td>
+<td class=xl24>22/07/26</td>
+<td class=xl24>M0H023F-PV9</td>
+<td class=xl24>H023F 尖嘴鉗(生管)</td>
+<td class=xl24>噴砂+磷酸鋅+金油/320全+內側刷鋼絲</td>
+<td class=xl33>1200.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300080</td>
+<td class=xl24> </td>
+<td class=xl24>22/07/21</td>
+<td class=xl24>22/07/26</td>
+<td class=xl24>M0H061-PVC</td>
+<td class=xl24>H061 鯉魚鉗(生管)</td>
+<td class=xl24>噴砂+磷酸鋅+金油/320全</td>
+<td class=xl33>1200.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300085</td>
+<td class=xl24> </td>
+<td class=xl24>22/07/21</td>
+<td class=xl24>22/07/26</td>
+<td class=xl24>M0H082PB-PVC</td>
+<td class=xl24>H082PB 水管鉗(生管)</td>
+<td class=xl24>噴砂+磷酸鋅+金油/320全</td>
+<td class=xl33>1728.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300088</td>
+<td class=xl24> </td>
+<td class=xl24>22/08/16</td>
+<td class=xl24>22/08/20</td>
+<td class=xl24>M0H032-PV9</td>
+<td class=xl24>H032 斜口鉗(生管)</td>
+<td class=xl24>噴砂+磷酸鋅+金油/320全+內側刷鋼絲</td>
+<td class=xl33>1320.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300092</td>
+<td class=xl24> </td>
+<td class=xl24>22/08/16</td>
+<td class=xl24>22/08/20</td>
+<td class=xl24>M0H023F-PV9</td>
+<td class=xl24>H023F 尖嘴鉗(生管)</td>
+<td class=xl24>噴砂+磷酸鋅+金油/320全+內側刷鋼絲</td>
+<td class=xl33>1200.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300096</td>
+<td class=xl24> </td>
+<td class=xl24>22/08/16</td>
+<td class=xl24>22/08/20</td>
+<td class=xl24>M0H061-PVC</td>
+<td class=xl24>H061 鯉魚鉗(生管)</td>
+<td class=xl24>噴砂+磷酸鋅+金油/320全</td>
+<td class=xl33>1200.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300099</td>
+<td class=xl24> </td>
+<td class=xl24>22/08/16</td>
+<td class=xl24>22/08/20</td>
+<td class=xl24>M0H082PB-PVC</td>
+<td class=xl24>H082PB 水管鉗(生管)</td>
+<td class=xl24>噴砂+磷酸鋅+金油/320全</td>
+<td class=xl33>1728.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300102</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/20</td>
+<td class=xl24>22/05/25</td>
+<td class=xl24>M0AA01-PKE</td>
+<td class=xl24>AA-01水管鉗(生管)</td>
+<td class=xl24>磷酸+金油/ 320面</td>
+<td class=xl33>200.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300109</td>
+<td class=xl24> </td>
+<td class=xl24>22/04/29</td>
+<td class=xl24>22/05/04</td>
+<td class=xl24>M0G083-PKE</td>
+<td class=xl24>G083 水管鉗(生管)</td>
+<td class=xl24>磷酸+金油/ 320面</td>
+<td class=xl33>1000.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300112</td>
+<td class=xl24> </td>
+<td class=xl24>22/04/29</td>
+<td class=xl24>22/05/04</td>
+<td class=xl24>M0G082-PKE</td>
+<td class=xl24>G082 水管鉗(生管)</td>
+<td class=xl24>磷酸+金油/ 320面</td>
+<td class=xl33>500.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300115</td>
+<td class=xl24> </td>
+<td class=xl24>22/04/30</td>
+<td class=xl24>22/05/04</td>
+<td class=xl24>M095BH/L-PAU</td>
+<td class=xl24>95BH/L 美式鋼絲鉗-雷射刃口(生管)</td>
+<td class=xl24>金油/ 側磨+側全+台階</td>
+<td class=xl33>1000.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300119</td>
+<td class=xl24> </td>
+<td class=xl24>22/04/30</td>
+<td class=xl24>22/05/04</td>
+<td class=xl24>M01021KT/L-PAS</td>
+<td class=xl24>1021KT/L尖嘴鉗-雷射刃口(生管)</td>
+<td class=xl24>金油/側磨+尖尾(尖)</td>
+<td class=xl33>1000.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300123</td>
+<td class=xl24> </td>
+<td class=xl24>22/04/30</td>
+<td class=xl24>22/05/04</td>
+<td class=xl24>M08032BH/L-PAV</td>
+<td class=xl24>8032BH/L斜口鉗-雷射刃口(生管)</td>
+<td class=xl24>金油 /側磨+圓弧(斜)</td>
+<td class=xl33>1000.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300130</td>
+<td class=xl24> </td>
+<td class=xl24>22/06/24</td>
+<td class=xl24>22/06/29</td>
+<td class=xl24>M0G082-PKE</td>
+<td class=xl24>G082 水管鉗(生管)</td>
+<td class=xl24>磷酸+金油/ 320面</td>
+<td class=xl33>500.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300133</td>
+<td class=xl24> </td>
+<td class=xl24>22/05/07</td>
+<td class=xl24>22/05/11</td>
+<td class=xl24>M0G033H/L-PAV</td>
+<td class=xl24>G033H/L 斜口鉗-雷射刃口(生管)</td>
+<td class=xl24>金油 / 側磨+圓弧(斜)</td>
+<td class=xl33>1000.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300137</td>
+<td class=xl24> </td>
+<td class=xl24>22/06/17</td>
+<td class=xl24>22/06/22</td>
+<td class=xl24>M0K083SA-PKE</td>
+<td class=xl24>K083SA 水管鉗(生管)</td>
+<td class=xl24>磷酸+金油/ 320面</td>
+<td class=xl33>1000.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300140</td>
+<td class=xl24> </td>
+<td class=xl24>22/06/25</td>
+<td class=xl24>22/06/29</td>
+<td class=xl24>M03GHR/L-PAX</td>
+<td class=xl24>3GHR/L 鋼絲鉗-雷射刃口(生管)</td>
+<td class=xl24>金油 / 熱後側磨+台階(鋼)</td>
+<td class=xl33>1500.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24>511-220300144</td>
+<td class=xl24> </td>
+<td class=xl24>22/10/29</td>
+<td class=xl24>22/11/02</td>
+<td class=xl24>M03GHR/L-PAX</td>
+<td class=xl24>3GHR/L 鋼絲鉗-雷射刃口(生管)</td>
+<td class=xl24>金油 / 熱後側磨+台階(鋼)</td>
+<td class=xl33>1500.000</td>
+</tr><tr>
+<td class=xl24> </td>
+<td class=xl24> </td>
+<td class=xl24> </td>
+<td class=xl24> </td>
+<td class=xl24> </td>
+<td class=xl24> </td>
+<td class=xl24> </td>
+<td class=xl24> </td>
+<td class=xl33> </td>
+</tr></table></body></html>

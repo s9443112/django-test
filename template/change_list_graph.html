@@ -1,0 +1,240 @@
+{% extends "admin/change_list.html" %}
+{% load static %}
+{% block extrahead %}
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search)
+        var randomColorGenerator = function () {
+            return '#' + (Math.random().toString(16) + '0000000').slice(2, 8);
+        };
+
+        Date.prototype.addDays = function(days) {
+            var date = new Date(this.valueOf());
+            date.setDate(date.getDate() + days);
+            return date;
+        }
+
+        function getDates(startDate, stopDate) {
+            var dateArray = new Array();
+            var currentDate = startDate;
+            while (currentDate <= stopDate) {
+                dateArray.push(moment(new Date(currentDate)).format("YYYY-MM-DD"));
+                currentDate = currentDate.addDays(1);
+            }
+            return dateArray;
+        }
+
+        var options = {
+            responsive: true,
+            maintainAspectRatio: true,
+            legend: {
+                position: 'bottom'
+            },
+            title: {
+                display: true
+            },
+            animation: {
+                animateScale: true,
+                animateRotate: true
+            }
+        };
+
+        function compare(a, b) {
+            if (a.date_time < b.date_time) {
+                return -1;
+            }
+            if (a.date_time > b.date_time) {
+                return 1;
+            }
+            return 0;
+        }
+        window.onload = function () {
+            var ctx = document.getElementById("count-chart");
+         
+            var device_buffer = []
+            let device_b = []
+            let count = []
+            let labels = []
+            let result 
+            let result2
+            let result3
+            {% regroup cl.queryset|dictsort:"id" by get_count_display as count_list %}
+            // console.log('{{ count_list.list }}')
+            
+           
+            {% for count in count_list %} 
+                {% for ct in count.list %}
+               
+                    // result = device.find(ele=>ele.name === '{{ct.device}}')
+                    // if(result === undefined){
+                    //     device.push({'name':'{{ct.device}}','count':{{ct.count}}})
+                    // }
+                    // console.log('{{ ct.device }} is {{ct.count}} {{ct.date_time}} ')]
+                    // console.log('{{ct.date_time|date:'Y-m-d' }}')
+                    device_buffer.push({
+                        'name':'{{ct.device}}',
+                        'count':{{ct.count}},
+                        'date_time': moment('{{ct.date_time|date:'Y-m-d'}}').format("YYYY-MM-DD")
+                    })
+                    // console.log('{{ ct.device }}') 
+                {% endfor %}
+            {% endfor %}
+                let start_time = new Date(params.get('date_time__gte'))
+                let end_time = new Date(params.get('date_time__lt'))
+
+                device_buffer.reverse()
+
+                console.log(device_buffer)
+                // console.log(params.get('date_time__gte'))
+                if(params.get('date_time__gte')==null){
+                    labels.push('全部')
+                    device_buffer.map((ele)=>{
+                        result = device_b.find(elee=>elee.label === ele.name)
+                        if(result === undefined){
+                            console.log(result)
+                            device_b.push({
+                                label: ele.name,
+                                data: [1],
+                                backgroundColor: randomColorGenerator(),
+                            })
+                        }else{
+                            result.data[0] = result.data[0] + 1
+                        }
+                    })
+
+                }else{
+
+                    device_buffer.map((ele)=>{
+                        result = device_b.find(elee=>elee.label === ele.name)
+                        if(result === undefined){
+                            console.log(result)
+                            device_b.push({
+                                label: ele.name,
+                                data: [],
+                                backgroundColor: randomColorGenerator(),
+                                // date_time: ele.date_time
+                            })
+                        }
+                    })
+
+                    console.log(device_b)
+
+                    // console.log(start_time)
+                    // console.log(end_time)
+                    // labels = getDates(start_time,end_time)
+                    // console.log(labels)
+
+
+                    var map = {}; device_buffer.forEach(function(val){
+                        map[val.date_time] = map[val.date_time] || {};
+                        map[val.date_time][val.name] = map[val.date_time][val.name] || 0;
+                        map[val.date_time][val.name]++;
+                        // console.log(`datetime ${val.date_time}  / ${JSON.stringify(val.name)}`)
+                    });
+
+                    var output = Object.keys(map).map(function(key){
+                        var tmpArr = [];
+                        // console.log(`datetime ${key}  / ${JSON.stringify(map[key])}`)
+                        for(var name in map[key])
+                        {
+                            tmpArr.push( [ name, map[key][name] ] )
+                        }
+                        return { date_time : key, name: tmpArr  };
+                    })
+                    console.log(output)
+                    output = output.sort(compare)
+                   
+                    console.log('------------------------')
+                    let buffer_x 
+                    output.map((ele)=>{
+                        console.log(ele.name)
+                        labels.push(ele.date_time)
+
+                        device_b.map((elee)=>{
+                            
+                            buffer_x = ele.name.find(elex=>elex[0] === elee.label)
+                            if(buffer_x === undefined){
+                                ele.name.push([elee.label,0])
+                            }
+                            // console.log(`${elee.label} ${buffer_x}`)
+                        })
+
+                        ele.name.map((elee)=>{
+                            // console.log(elee)
+                            result = device_b.find(eleee=>eleee.label === elee[0])
+                            // console.log(result)
+                            result.data.push(elee[1])
+                        })
+                        // buffer_x = output.find(elex=>elex.label === )
+                        // buffer_x = ele.name.find(elex=>elex[0] === )
+                        // labels.push(ele.date_time)
+
+                    })
+
+                    
+                    
+                    // labels.map((eled,d)=>{
+                    //     console.log(d)
+                    //     device_buffer.map((ele,dd)=>{
+                    //         // console.log(dd)
+                    //         result2 = device_b.find(elee=>elee.datetime === eled)
+                    //         result = device_b.find(elee=>elee.label === ele.name)
+                    //         if(result === undefined){
+                    //             // console.log(result)
+                    //             device_b.push({
+                    //                 label: ele.name,
+                    //                 data: [],
+                    //                 backgroundColor: randomColorGenerator(),
+                    //                 datetime: eled
+                    //             })
+                                
+                    //         }else{
+                    //             result.data[d] = result.data[d] + 1
+                    //         }
+                    //         if(result2 === undefined){
+                    //             result3 = device_b.find(elee=>elee.label === ele.name)
+                    //                 // console.log(result3)
+
+                    //             result3.data.push(0)
+                    //         }
+
+                           
+                    //     })
+                    // })
+                    
+                    
+                }
+                console.log(device_b)
+
+
+                // device_buffer.map((ele)=>{
+                //     if(device)
+                // })
+
+            var lineChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets:device_b
+                },
+                options: options
+            });
+            
+           
+        }
+    </script>
+{% endblock %}
+{% block content %}
+    <h1> 圖表 </h1>
+    <hr>
+    <div class="row">
+        <div class="col-sm-6">
+            <canvas id="count-chart" style="width: 100px !important; height: 10vh"></canvas>
+        </div>
+       
+    </div>
+    {{ block.super }}
+{% endblock %}

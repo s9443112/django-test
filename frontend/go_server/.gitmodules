@@ -1,0 +1,3 @@
+[submodule "client"]
+	path = client
+	url = https://github.com/s9443112/new_handpaw_react
